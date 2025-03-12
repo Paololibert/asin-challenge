@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: asin-challenge
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@database:5432/asin-challenge"
+    volumes:
+      - .:/app
+    command: ["node", "src/index.js"]
+
+volumes:
+  postgres_data:

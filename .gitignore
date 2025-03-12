@@ -1,0 +1,9 @@
+node_modules
+# Keep environment variables out of version control
+.env
+~$people.xlsx
+~$people2.xlsx
+~$people3.xlsx
+people.xlsx
+people3.xlsx
+people2.xlsx

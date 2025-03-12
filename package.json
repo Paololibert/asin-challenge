@@ -1,0 +1,26 @@
+{
+  "name": "asin-take-home-challenge",
+  "version": "1.0.0",
+  "description": "challenge",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "import": "node src/services/xlsx.service.js --file path/to/your/file.xlsx",
+    "import-stdin": "node src/services/xlsx.service.js",
+    "start": "node src/index.js",
+    "display": "node src/services/display.service.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "commander": "^13.1.0",
+    "prisma": "^6.5.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mock-stdin": "^1.0.0"
+  }
+}
