@@ -36,6 +36,7 @@ const convertDate = (excelDate) => {
 
 const processXLSX = async (filePath) => {
   try {
+    console.time('processXLSX');
     let workbook;
     if (filePath) {
       workbook = XLSX.readFile(filePath);
@@ -56,6 +57,7 @@ const processXLSX = async (filePath) => {
     });
 
     await importData(convertedData);
+    console.timeEnd('processXLSX');
     console.log('Importation réussie !');
   } catch (error) {
     console.error("Erreur lors de l'importation :", error);
