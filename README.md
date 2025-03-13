@@ -65,3 +65,6 @@ To run the tests, use the following command:
 npm test
 ```
 
+## Capture d'écran
+
+![temps de performance](./screenshot.png)
